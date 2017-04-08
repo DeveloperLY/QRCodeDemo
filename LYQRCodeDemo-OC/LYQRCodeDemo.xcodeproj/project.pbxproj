@@ -125,11 +125,10 @@
 			attributes = {
 				CLASSPREFIX = LY;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = CoderYLiu;
+				ORGANIZATIONNAME = DeveloperLY;
 				TargetAttributes = {
 					CDC4E63F1C1D4ADC000071C2 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 342VP95RM8;
 					};
 				};
 			};
@@ -285,6 +284,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LYQRCodeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -300,6 +300,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LYQRCodeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
