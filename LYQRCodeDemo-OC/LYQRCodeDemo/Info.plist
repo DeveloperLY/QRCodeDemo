@@ -34,5 +34,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>允许此权限才能使用相机功能</string>
 </dict>
 </plist>
