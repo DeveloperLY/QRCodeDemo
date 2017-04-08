@@ -3,4 +3,4 @@ iOS原生API，二维码扫描和生成, 需要iOS7.0及以上系统支持。简
 
 ## screenshots
 ***
-![image](https://github.com/CoderYLiu/QRCodeDemo/blob/master/Preview/demo.gif)
+![image](Preview/demo.gif)
