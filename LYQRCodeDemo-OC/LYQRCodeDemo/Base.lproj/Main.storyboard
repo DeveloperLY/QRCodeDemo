@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f9S-cl-Iq0">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f9S-cl-Iq0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--扫描二维码-->
@@ -17,17 +22,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="二维码内容" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z45-KU-hb3">
-                                <rect key="frame" x="20" y="184" width="335" height="250"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="二维码内容" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z45-KU-hb3">
+                                <rect key="frame" x="20" y="228" width="335" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="0zZ-pF-Zly"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmU-Ws-apD">
-                                <rect key="frame" x="20" y="82" width="335" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmU-Ws-apD">
+                                <rect key="frame" x="20" y="126" width="335" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="wha-7x-CkE"/>
                                 </constraints>
@@ -36,9 +41,10 @@
                                     <action selector="scanQRCode" destination="BYZ-38-t0r" eventType="touchUpInside" id="HEb-Ng-G5T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNM-je-PxT">
-                                <rect key="frame" x="150" y="484" width="75" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNM-je-PxT">
+                                <rect key="frame" x="110" y="528" width="147" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="Kqq-4z-iGS"/>
                                     <constraint firstAttribute="height" constant="30" id="XrT-HO-Vwp"/>
                                 </constraints>
                                 <state key="normal" title="生成二维码"/>
@@ -47,21 +53,19 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Z45-KU-hb3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="3Nh-rp-Sj8"/>
                             <constraint firstItem="Z45-KU-hb3" firstAttribute="top" secondItem="YmU-Ws-apD" secondAttribute="bottom" constant="75" id="EcZ-I7-GDb"/>
                             <constraint firstAttribute="trailing" secondItem="YmU-Ws-apD" secondAttribute="trailing" constant="20" id="KP4-Cd-TDG"/>
                             <constraint firstItem="YmU-Ws-apD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="R6Q-rS-xfR"/>
-                            <constraint firstItem="tNM-je-PxT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="RiK-Tk-173"/>
                             <constraint firstItem="YmU-Ws-apD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="TQh-mT-F2r"/>
+                            <constraint firstItem="tNM-je-PxT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="94" id="YgP-PW-sau"/>
                             <constraint firstItem="tNM-je-PxT" firstAttribute="top" secondItem="Z45-KU-hb3" secondAttribute="bottom" constant="50" id="kbG-dG-Fs4"/>
                             <constraint firstAttribute="trailing" secondItem="Z45-KU-hb3" secondAttribute="trailing" constant="20" id="lzM-WO-3Ed"/>
-                            <constraint firstAttribute="trailing" secondItem="tNM-je-PxT" secondAttribute="trailing" constant="150" id="tmp-xX-FoR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="扫描二维码" id="zbn-xO-YEL"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="scanButton" destination="YmU-Ws-apD" id="ACb-TL-wmc"/>
                         <outlet property="scanLabel" destination="Z45-KU-hb3" id="DCn-Dz-j9m"/>
@@ -69,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1181.5" y="487.5"/>
+            <point key="canvasLocation" x="244" y="474.51274362818594"/>
         </scene>
         <!--CustomQR Code Controller-->
         <scene sceneID="wZW-SX-BTq">
@@ -91,28 +95,25 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Bw5-OR-Qcy" secondAttribute="centerY" id="RMb-3l-KRl"/>
                             <constraint firstAttribute="centerX" secondItem="Bw5-OR-Qcy" secondAttribute="centerX" id="ghE-2y-oUU"/>
                         </constraints>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="qrcodeView" destination="Bw5-OR-Qcy" id="Uf1-89-9eO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRo-J1-DCa" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717.5" y="487.5"/>
+            <point key="canvasLocation" x="1034" y="475"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ca3-5m-DRw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f9S-cl-Iq0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2PW-oO-c6h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -124,7 +125,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="riM-bH-3D4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="369" y="487"/>
+            <point key="canvasLocation" x="-534" y="475"/>
         </scene>
     </scenes>
 </document>
