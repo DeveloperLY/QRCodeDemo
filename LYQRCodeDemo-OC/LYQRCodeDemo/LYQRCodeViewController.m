@@ -162,6 +162,12 @@ static const float kReaderViewHeight = 200;
     labIntroudction.text = @"将二维码置于框内, 即可自动扫描";
     [self.view addSubview:labIntroudction];
     
+    UIButton *openLightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    openLightButton.frame =  CGRectMake(CGRectGetMaxX(leftView.frame), CGRectGetMinY(labIntroudction.frame) + 55, kReaderViewWidth, 20);
+    [openLightButton setTitle:@"打开手电筒🔦" forState:UIControlStateNormal];
+    [openLightButton addTarget:self action:@selector(openLightButtonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:openLightButton];
+    
     UIView *scanCropView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(leftView.frame) - 1,kLineMinY,self.view.frame.size.width - 2 * CGRectGetMaxX(leftView.frame) + 2, kReaderViewHeight + 2)];
     scanCropView.layer.borderColor = [UIColor greenColor].CGColor;
     scanCropView.layer.borderWidth = 2.0;
@@ -230,26 +236,19 @@ static const float kReaderViewHeight = 200;
     AVCaptureSession *session = [[AVCaptureSession alloc] init];
     
     // 读取质量，质量越高，可读取小尺寸的二维码
-//    if ([session canSetSessionPreset:AVCaptureSessionPreset1920x1080])
-//    {
+//    if ([session canSetSessionPreset:AVCaptureSessionPreset1920x1080]) {
 //        [session setSessionPreset:AVCaptureSessionPreset1920x1080];
-//    }
-//    else if ([session canSetSessionPreset:AVCaptureSessionPreset1280x720])
-//    {
+//    } else if ([session canSetSessionPreset:AVCaptureSessionPreset1280x720]) {
 //        [session setSessionPreset:AVCaptureSessionPreset1280x720];
-//    }
-//    else
-//    {
+//    } else {
 //        [session setSessionPreset:AVCaptureSessionPresetPhoto];
 //    }
-//    
-//    if ([session canAddInput:input])
-//    {
+//
+//    if ([session canAddInput:input]) {
 //        [session addInput:input];
 //    }
-//    
-//    if ([session canAddOutput:output])
-//    {
+//
+//    if ([session canAddOutput:output]) {
 //        [session addOutput:output];
 //    }
     
@@ -318,6 +317,29 @@ static const float kReaderViewHeight = 200;
         self.LYQRCodeCancleBlock(self);
     }
     NSLog(@"取消扫码...");
+}
+
+- (void)openLightButtonDidClick:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    if (sender.isSelected == YES) { //打开闪光灯
+        AVCaptureDevice *captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+        NSError *error = nil;
+        
+        if ([captureDevice hasTorch]) {
+            BOOL locked = [captureDevice lockForConfiguration:&error];
+            if (locked) {
+                captureDevice.torchMode = AVCaptureTorchModeOn;
+                [captureDevice unlockForConfiguration];
+            }
+        }
+    } else {//关闭闪光灯
+        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+        if ([device hasTorch]) {
+            [device lockForConfiguration:nil];
+            [device setTorchMode: AVCaptureTorchModeOff];
+            [device unlockForConfiguration];
+        }
+    }
 }
 
 #pragma mark - 上下滚动交互线
