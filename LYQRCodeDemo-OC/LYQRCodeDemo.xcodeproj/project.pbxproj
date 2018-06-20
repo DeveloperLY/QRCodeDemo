@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A4D410F20D9F18D00E7F6BA /* LYQRCodeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4D410E20D9F18D00E7F6BA /* LYQRCodeUtil.m */; };
 		CDC00F0E1C1D7B0000EC02E3 /* LYCustomQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC00F0D1C1D7B0000EC02E3 /* LYCustomQRCodeController.m */; };
 		CDC4E6451C1D4ADC000071C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC4E6441C1D4ADC000071C2 /* main.m */; };
 		CDC4E6481C1D4ADC000071C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC4E6471C1D4ADC000071C2 /* AppDelegate.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A4D410D20D9F18D00E7F6BA /* LYQRCodeUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYQRCodeUtil.h; sourceTree = "<group>"; };
+		6A4D410E20D9F18D00E7F6BA /* LYQRCodeUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYQRCodeUtil.m; sourceTree = "<group>"; };
 		CDC00F0C1C1D7B0000EC02E3 /* LYCustomQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCustomQRCodeController.h; sourceTree = "<group>"; };
 		CDC00F0D1C1D7B0000EC02E3 /* LYCustomQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCustomQRCodeController.m; sourceTree = "<group>"; };
 		CDC4E6401C1D4ADC000071C2 /* LYQRCodeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYQRCodeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +96,8 @@
 				CDC4E65C1C1D4C4B000071C2 /* LYQRCodeViewController.m */,
 				CDC00F0C1C1D7B0000EC02E3 /* LYCustomQRCodeController.h */,
 				CDC00F0D1C1D7B0000EC02E3 /* LYCustomQRCodeController.m */,
+				6A4D410D20D9F18D00E7F6BA /* LYQRCodeUtil.h */,
+				6A4D410E20D9F18D00E7F6BA /* LYQRCodeUtil.m */,
 			);
 			name = LYQRCode;
 			sourceTree = "<group>";
@@ -129,7 +134,7 @@
 				TargetAttributes = {
 					CDC4E63F1C1D4ADC000071C2 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = VW6LLKQB96;
+						DevelopmentTeam = 342VP95RM8;
 					};
 				};
 			};
@@ -169,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A4D410F20D9F18D00E7F6BA /* LYQRCodeUtil.m in Sources */,
 				CDC4E64B1C1D4ADC000071C2 /* ViewController.m in Sources */,
 				CDC00F0E1C1D7B0000EC02E3 /* LYCustomQRCodeController.m in Sources */,
 				CDC4E65D1C1D4C4B000071C2 /* LYQRCodeViewController.m in Sources */,
@@ -237,7 +243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -276,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -289,10 +295,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = VW6LLKQB96;
+				DEVELOPMENT_TEAM = 342VP95RM8;
 				INFOPLIST_FILE = LYQRCodeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.developerly.LYQRCodeDemo-OC";
+				PRODUCT_BUNDLE_IDENTIFIER = net.developerly.qrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -304,10 +310,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = VW6LLKQB96;
+				DEVELOPMENT_TEAM = 342VP95RM8;
 				INFOPLIST_FILE = LYQRCodeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.developerly.LYQRCodeDemo-OC";
+				PRODUCT_BUNDLE_IDENTIFIER = net.developerly.qrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
